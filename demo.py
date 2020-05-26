@@ -9,7 +9,7 @@ import nmap
 
 scanner = nmap.PortScanner()
 
-print("Welcome, this is a simple nmap automation tool By Stephen")
+print("Welcome, this is a simple nmap automation tool By Stephen and Namsi")
 print("<----------------------------------------------------->")
 
 ip_addr = input("Please enter the IP address you want to scan: ")
