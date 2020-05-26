@@ -21,3 +21,12 @@ resp = input("""\nPlease enter the type of scan you want to run
                 2)UDP Scan\n""")
 print("You have selected option: ", resp)
 
+if resp == '1':
+    # -v verbose
+    # -sS TCP SYN scan
+    print("Nmap Version: ", scanner.nmap_version())
+    scanner.scan(ip_addr, '1-1024', '-v -sS')
+    print(scanner.scaninfo())
+    print("Ip Status: ", scanner[ip_addr].state())
+    print(scanner[ip_addr].all_protocols())
+    print("Open Ports: ", scanner[ip_addr]['tcp'].keys())
